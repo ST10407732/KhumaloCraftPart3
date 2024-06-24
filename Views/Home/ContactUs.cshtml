@@ -1,0 +1,132 @@
+﻿
+
+<h1>@ViewData["Title"]</h1>
+<style>
+    .Contact-container {
+        background-color: deeppink;
+        color: white;
+        padding: 20px;
+    }
+
+
+
+    .map-container {
+        margin-bottom: 20px;
+    }
+
+    .column form {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .column form label {
+            margin-bottom: 5px;
+        }
+
+        .column form input[type="text"],
+        .column form select,
+        .column form textarea {
+            padding: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .column form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    .message-container {
+        display: flex;
+    }
+
+    .message {
+        flex: 1;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        background-color: deeppink;
+    }
+</style>
+
+<div class="Contact-container">
+    <h1>Contact KhumaloCraft</h1>
+</div>
+<div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.626736562592!2d30.992505674516007!3d-29.81732622077976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70731a12661f7%3A0x32a464ce91cbdee!2s65%20Mullein%20Pl%2C%20Springfield%2C%20Durban%2C%204091!5e0!3m2!1sen!2sza!4v1711485877942!5m2!1sen!2sza" width="1000" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+<div class="text-center">
+    <h1 class="display-2" style="color:deeppink;" style="font-weight: bold;">Contact Us</h1>
+
+    <div class="message-container">
+        <div class="message">
+            <h1 class="display-5" style="font-weight: bold;">Contact Directly</h1>
+            <p style="color: blue;">
+                <img src="/Image/email.png" alt="Email Icon" height="35" width="30">
+                KhumaloCraft@gmail.com
+            </p>
+            <p style="color: blue;">
+                <img src="/Image/call logo.jpg" alt="Call Icon" height="35" width="30">
+                0628787654
+            </p>
+            <p style="color: blue;">
+                <img src="/Image/WhatsApp_icon.png" alt="Whatsapp Icon" height="35" width="30">
+                0628788754
+            </p>
+
+
+
+        </div>
+        <div class="message">
+            <h1 class="display-5" style="font-weight: bold;">Address</h1>
+            <p style="color: black;">
+                <img src="/Image/Address.png" alt="Address Icon" height="35" width="30">
+                67 Mullein Place, Springfield,Durban,400421
+            </p>
+
+        </div>
+    </div>
+    <div class="message">
+        <h1 class="display-5" style="font-weight: bold;">Join Us Share the world of Creativity</h1>
+        <P>Send your CV at</P>
+        <p style="color:blue;">
+            <img src="/Image/email.png" alt="Email Icon" height="35" width="30">
+            KhumaloCraft@gmail.com
+
+
+        </p>
+
+    </div>
+</div>
+<div class="text-center">
+    <h1 class="display-2" style="color: deeppink; font-weight: bold;">Get In Touch With Us</h1>
+    <div class="column">
+        <form action="/action_page.php" style="max-width: 600px; margin: auto;">
+            <label for="fname" style="display: block; margin-top: 10px;">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+
+            <label for="lname" style="display: block; margin-top: 10px;">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+
+            <label for="country" style="display: block; margin-top: 10px;">Country</label>
+            <select id="country" name="country" style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                <option value="South Africa">South Africa</option>
+                <option value="Angola">Angola</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+
+            <label for="subject" style="display: block; margin-top: 10px;">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; height: 100px;"></textarea>
+
+            <input type="submit" value="Submit" style="background-color: deeppink; color: white; padding: 10px 20px; margin-top: 10px; border: none; cursor: pointer; width: 100%;">
+        </form>
+    </div>
+</div>
+

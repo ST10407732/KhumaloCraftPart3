@@ -1,0 +1,62 @@
+﻿
+
+        <style >
+        body {
+            background-image: url('/Image/logo.jpg');
+            background-size: 30%;
+            background-position: center;
+        }
+  
+        .thank-you-container {
+            background-color: pink;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .thank-you-message {
+            font-size: 2.5em;
+            color: #4a90e2;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px #aaa;
+        }
+
+        .thank-you-text {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .order-history-btn {
+            padding: 10px 20px;
+            background-color: deeppink;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            .order-history-btn:hover {
+                background-color: royalblue;
+                transform: scale(1.05);
+            }
+    </style>
+}
+
+<div class="thank-you-container">
+    <h2 class="thank-you-message">Thank you for your payment!</h2>
+    <p class="thank-you-text">
+        Your transaction was successful. You will receive a confirmation email shortly with your order details.
+        We appreciate your business and look forward to serving you again!
+    </p>
+    <a href="@Url.Action("OrderHistory", "Order")" class="order-history-btn">View Order History</a>
+</div>

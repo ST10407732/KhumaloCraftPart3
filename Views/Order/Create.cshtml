@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('/Image/logo.jpg');
+            background-size: 30%;
+            background-position: center;
+        }
+    </style>
+    <style>
+
+        /* Global styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Centering container */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            color: deeppink;
+        }
+
+        /* Subheading style */
+        h3 {
+            color: deeppink;
+            text-align: center;
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            margin: 10px auto;
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 5px;
+        }
+
+        /* Paragraph styling */
+        p {
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Form group styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            /* Label styling */
+            .form-group label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+        /* Input styling */
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Button styling */
+        .btn-primary {
+            background-color: deeppink;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+            .btn-primary:hover {
+                background-color: darkpink;
+            }
+
+        /* Back to list link styling */
+        .back-link {
+            text-align: center;
+            display: block;
+            margin: 20px auto;
+            color: deeppink;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Summary</h1>
+
+        <div>
+            <h3>Selected Product:</h3>
+            <img src="@Model.Product.ImageUrl" alt="Product Image" />
+            <p>Name: @Model.Product.Name</p>
+            <p>Price: @Model.Product.Price each</p>
+            <p>Category: @Model.Product.Category</p>
+        </div>
+
+        <form asp-action="Create" method="post">
+            <input type="hidden" name="productId" value="@Model.ProductId" />
+            <input type="hidden" name="userId" value="@ViewBag.UserId" />
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+        </form>
+
+        <div>
+            <a asp-action="Index" class="back-link">Back to List</a>
+        </div>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>
